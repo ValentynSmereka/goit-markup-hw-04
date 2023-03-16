@@ -5,6 +5,9 @@
   --primaru-text-color: #2e2f42;
   --secondary-text-color: #434455;
   --button-color: #4d5ae5;
+  --fill-customers: #8e8f99;
+  --focus-fill-customers: #404bbf;
+  --footer-backgraund-svg: #31d0aa;
 }
 
 h1,
@@ -66,15 +69,35 @@ body {
 .button-portfolio:focus {
   background: #404bbf;
   color: #ffffff;
+  border: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-img-item:hover,
-.portfolio-img-item:focus {
+.portfolio-img-item:focus{
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+/* .ink-portfolio:focus,
+.ink-portfolio:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+} */
+
+.team-link:hover,
+.team-link:focus {
+  background: #404bbf;
+}
+.customers-link:hover,
+.customers-link:focus {
+  fill: var(--focus-fill-customers);
+  border: solid var(--focus-fill-customers);
+}
+.social-media-link:hover,
+.social-media-link:focus {
+  background-color: var(--footer-backgraund-svg);
+}
 .button-portfolio {
   font-family: var(--primary-font);
 
@@ -324,15 +347,6 @@ body {
   color: var(--secondary-text-color);
   text-align: center;
 }
-.items-list-team {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #4d5ae5;
-}
 
 .proces-list {
   display: flex;
@@ -363,6 +377,15 @@ body {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+}
+.team-link {
+  display: flex;
+
+  padding: 12px 12px 12px 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
 }
 
 .list-img {
@@ -400,9 +423,8 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.castomer-list-item {
+.customers-link {
   display: flex;
-  margin-bottom: 8px;
 
   width: 168px;
   height: 88px;
@@ -410,10 +432,15 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  border: 1px solid #8e8f99;
+  fill: var(--fill-customers);
+  border: 1px solid var(--fill-customers);
 }
+
 .castomers-section {
   padding-bottom: 120px;
+}
+.castomers-icon {
+  fill: #8e8f99;
 }
 
 /* ===========Footer=============== */
@@ -476,6 +503,10 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+}
+.social-media-icon {
+  width: 24px;
+  height: 24px;
 }
 .social-media-list {
   display: flex;
