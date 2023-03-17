@@ -38,6 +38,9 @@ body {
   font-family: var(--primary-font);
   color: var(--secondary-text-color);
 }
+:focus {
+  outline: none;
+}
 .container {
   width: 1158px;
   margin-left: auto;
@@ -69,21 +72,16 @@ body {
 .button-portfolio:focus {
   background: #404bbf;
   color: #ffffff;
-  border: #404bbf;
+  border-color: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.portfolio-img-item:hover,
-.portfolio-img-item:focus{
+
+.link-portfolio:focus,
+.link-portfolio:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
-/* .ink-portfolio:focus,
-.ink-portfolio:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-} */
 
 .team-link:hover,
 .team-link:focus {
@@ -92,7 +90,7 @@ body {
 .customers-link:hover,
 .customers-link:focus {
   fill: var(--focus-fill-customers);
-  border: solid var(--focus-fill-customers);
+  border: 1px solid var(--focus-fill-customers);
 }
 .social-media-link:hover,
 .social-media-link:focus {
@@ -531,6 +529,9 @@ body {
   flex-wrap: wrap;
   row-gap: 48px;
 }
+.link-portfolio {
+  background: #ffffff;
+}
 
 .secondary-title-portfolio {
   font-weight: 500;
@@ -541,7 +542,9 @@ body {
   color: var(--primaru-text-color);
   margin-bottom: 8px;
 }
-
+.link-portfolio {
+  display: block;
+}
 .section-portfolio {
   padding-bottom: 120px;
   padding-top: 96px;
